@@ -10,11 +10,6 @@ import com.intellij.openapi.vcs.checkin.CheckinHandlerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogApplicationComponent extends CheckinHandlerFactory implements ApplicationComponent {
 
     @Override

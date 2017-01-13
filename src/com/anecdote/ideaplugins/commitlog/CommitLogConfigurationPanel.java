@@ -3,10 +3,6 @@ package com.anecdote.ideaplugins.commitlog;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogConfigurationPanel extends JPanel {
 
     private CommitLogProjectComponent _projectComponent;

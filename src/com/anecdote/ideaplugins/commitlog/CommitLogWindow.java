@@ -21,10 +21,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 class CommitLogWindow {
 
     private Project project;

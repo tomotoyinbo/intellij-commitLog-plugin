@@ -24,10 +24,6 @@ import java.awt.event.ActionEvent;
 import java.io.File;
 import java.util.Date;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogConfigurationPage extends JPanel {
 
     private CommitLogTemplate template;

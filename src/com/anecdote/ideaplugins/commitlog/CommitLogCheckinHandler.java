@@ -27,10 +27,6 @@ import java.text.DateFormat;
 import java.util.*;
 import java.util.List;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogCheckinHandler extends CheckinHandler {
 
     private final CommitLogProjectComponent projectComponent;

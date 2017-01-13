@@ -22,10 +22,6 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 
-/**
- * Author: omotoyt
- * Created date: 1/11/2017.
- */
 public class GenerateCommentAction extends AnAction {
 
     private static final String GENERATE = "Generate";

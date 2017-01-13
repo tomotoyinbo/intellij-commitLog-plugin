@@ -29,10 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 @State(name = "CommitLogProjectComponent",
         storages = {@com.intellij.openapi.components.Storage(id = "COMMIT_LOG_PLUGIN", file = "$PROJECT_FILE$")})
 public class CommitLogProjectComponent implements ProjectComponent, Configurable,

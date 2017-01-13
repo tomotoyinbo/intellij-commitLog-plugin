@@ -17,10 +17,6 @@ import java.io.File;
 import java.text.DateFormat;
 import java.util.*;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 class CommitLogBuilder {
 
     private static final String TIME_PLACEHOLDER = "TIME";

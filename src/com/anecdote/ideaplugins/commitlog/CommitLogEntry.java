@@ -8,10 +8,6 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 class CommitLogEntry implements Comparable {
 
     private final File file;

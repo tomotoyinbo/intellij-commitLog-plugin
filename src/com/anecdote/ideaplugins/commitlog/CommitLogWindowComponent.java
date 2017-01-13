@@ -10,10 +10,6 @@ import org.jetbrains.annotations.Nullable;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogWindowComponent extends JPanel implements DataProvider {
 
     private final JComponent component;

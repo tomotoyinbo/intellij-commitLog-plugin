@@ -1,9 +1,5 @@
 package com.anecdote.ideaplugins.commitlog;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 class CommitLogSection {
 
     private final String text;

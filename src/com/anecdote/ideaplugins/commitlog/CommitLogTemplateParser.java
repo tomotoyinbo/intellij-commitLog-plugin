@@ -5,10 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-/**
- * Author: omotoyt
- * Created date: 1/10/2017.
- */
 public class CommitLogTemplateParser {
 
     public static final String VALUE_PLACEHOLDER_SYMBOL = "$";
