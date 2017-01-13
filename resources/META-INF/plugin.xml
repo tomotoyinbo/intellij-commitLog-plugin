@@ -15,10 +15,10 @@
   * Improve template editing.<br>
   * Add configuration of text used for change types.<br>
   ]]></description>
-  <version>1.3</version>
+  <version>1.4</version>
   <!--Don't forget to update the version CONSTANT!!!-->
   <vendor email="anecdotesoftware@gmail.com" url="http://code.google.com/p/ideacommitlogplugin/">Nathan Brown</vendor>
-  <idea-version since-build="111.69"/>
+  <idea-version since-build="162" until-build="162.*"/>
   <change-notes><![CDATA[
     1.4   - Rebuilt for IDEA 2016.2.X<br>
     1.3   - Rebuilt for IDEA 11<br>
