@@ -18,6 +18,7 @@
   <version>1.4</version>
   <!--Don't forget to update the version CONSTANT!!!-->
   <vendor email="anecdotesoftware@gmail.com" url="http://code.google.com/p/ideacommitlogplugin/">Nathan Brown</vendor>
+  <vendor email="tomotoyinbo@gmail.com" url="https://github.com/tomotoyinbo/intellij-commitLog-plugin">Tayo Omotoyinbo</vendor>
   <idea-version since-build="162" until-build="162.*"/>
   <change-notes><![CDATA[
     1.4   - Rebuilt for IDEA 2016.2.X<br>
