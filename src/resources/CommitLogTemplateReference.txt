@@ -1,0 +1,36 @@
+The commit log template is a simple text based template with various dynamic sections.
+
+It contains plain text, and two types of dynamic placeholders:
+* The first type - the value placeholder - is delimited by $'s either side; e.g. $FILE_COUNT$.  These get replaced with the relevant values based on the context they are substituted in, and are sometimes only valid in certain places.
+* The second type - the block placeholder - is delimited by []; e.g. [FILE_ENTRY].  These mark a template block that may be inserted 0 to many times, depending on the contents of the commit.  Each block placeholder inserted must have a matching closing ([/...]) version at the relevant place later in the document; blocks cannot be overlapped.
+
+The value placeholders supported throughout the whole template are as follows:
+* $COMMIT_MESSAGE$ : Gives the commit message entered by the user upon commit.
+* $FILE_COUNT$ : Gives the file count based on the location of the placeholder.  If outside a content block, it gives the total file count.  If inside a content block, gives the file count for that block - e.g. if inside a [ROOT_ENTRY] block, it gives the number of affected files within that root.
+* $ROOT_COUNT$ : Gives the number of vcs roots affected by the commit. A vcs root is a top level vcs folder – e.g. a module in cvs.
+* $ROOT_LIST$ : A comma-delimited list of the vcs roots affected by the commit.
+* $DATE$ : The date that the commit was performed.
+* $TIME$ : The time that the commit was performed.
+* $DATE_TIME$ : The date and time that the commit was performed.
+
+The block placeholders supported throughout the template are as follows:
+* [ROOTS_SECTION]...[/ROOTS_SECTION] : May be wrapped around any part of the template.  This block will only be processed if there are files committed. Within the [ROOT_SECTION] block, a [ROOT_ENTRY] block should be placed.  This will be processed for every vcs root affected by the commit, and all processing within the [ROOT_ENTRY] block will be specific to the vcs root.
+* [DELETED_FILES]...[/DELETED_FILES] : This block will only be processed if there are deleted files in the commit, or in the vcs root if embedded in a [ROOT_ENTRY] block.
+* [MODIFIED_FILES]...[/MODIFIED_FILES] : This block will only be processed if there are modified files in the commit, or in the vcs root if embedded in a [ROOT_ENTRY] block.
+* [ADDED_FILES]...[/ADDED_FILES] : This block will only be processed if there are added files in the commit, or in the vcs root if embedded in a [ROOT_ENTRY] block.
+* [ALL_FILES]...[/ALL_FILES] : This block will only be processed if there are files in the commit, or in the vcs root if embedded in a [ROOT_ENTRY] block.
+  
+Within each of the [*_FILES] blocks, a [FILE_ENTRY] block should be placed. This will be processed for every file affected by the commit, changed in the way specified by the block, and all processing within the [FILE_ENTRY] block will be specific to the file.
+
+The value placeholders supported in the [FILE_ENTRY] block are as follows:
+* $PACKAGE_NAME$ : The package name of the file.
+* $FILE_NAME$ : The name of the file.
+* $FILE_PATH$ : The full path of the file in the local system.
+* $ROOT_NAME$ : The vcs root that the file is under.
+* $PATH_FROM_ROOT$ : The path of the file directory relative to the vcs root directory.
+* $FILE_ACTION$ : The action undertaken on the file during commit; either 'Removed', 'Modified' or 'Added'.
+* $OLD_REVISION_NUMBER$ : The revision number of the file before commit.
+* $NEW_REVISION_NUMBER$ : The revision number of the file after commit.
+* $CHANGE_SYMBOL$ : A symbol reflecting the change in a file : + for added, - for deleted, and * for changed.
+
+If you wish to place a literal '$', '[', ']' or '\' into the template, it should be prefixed with the escape character '\'.  Note that whitespace and newlines are fully retained during template processing.

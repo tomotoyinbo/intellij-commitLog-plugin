@@ -1,0 +1,52 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin>
+  <name>Commit Log</name>
+  <description><![CDATA[Creates a commit log for each commit executed, according to a user defined template.<br><br>
+  This is mainly aimed at those of us who have a non-vcs integrated issue tracking system (e.g. bugzilla) and who want to record exact details of associated commits within their issue updates.<br>
+  However, at present the plugin generates a simple textual log, based on a user-defined template, so this can be used for any purpose required, such as emailing or placing into documents.<br>
+  Ultimately it is intended to implement automated actions to be performed post commit, e.g. for integration with issue trackers, or emailing of logs.<br>
+  <br>
+  Commit comments can also be generated based on files in the changelist to ease per-file commenting in the comment.
+  <br>
+  Settings can be edited on a per-project basis in Project Settings|Commit Log.<br>
+  <br>
+  To Do:<br>
+  * Allow automated actions to be defined for execution using the generated commit log.<br>
+  * Improve template editing.<br>
+  * Add configuration of text used for change types.<br>
+  ]]></description>
+  <version>1.3</version>
+  <!--Don't forget to update the version CONSTANT!!!-->
+  <vendor email="anecdotesoftware@gmail.com" url="http://code.google.com/p/ideacommitlogplugin/">Nathan Brown</vendor>
+  <idea-version since-build="111.69"/>
+  <change-notes><![CDATA[
+    1.3   - Rebuilt for IDEA 11<br>
+    1.2.2 - Rebuilt for IDEA 10.5<br>
+    1.2.1 - Fixed NPE when current version of deleted file cannot be accessed.<br>
+            Fixed null being inserted for PATH_FROM_ROOT placeholder when file is at root (https://code.google.com/p/ideacommitlogplugin/issues/detail?id=3)<br>
+    1.2   - Rebuilt for IDEA 10.<br>
+    1.1.1 - Fixed incorrect change type reported for deleted files<br>
+    1.1   - Added commit comment generation<br>
+    1.0.2 - Fix for null pointer exception when committing non-java files - replaced PACKAGE_PATH with PATH_FROM_ROOT in template.<br>
+    1.0.1 - Fix to template documentation.<br>
+    1.0   - Initial Version
+]]>
+  </change-notes>
+  <application-components>
+    <!-- Add your application components here -->
+    <component>
+      <implementation-class>com.anecdote.ideaplugins.commitlog.CommitLogApplicationComponent</implementation-class>
+    </component>
+  </application-components>
+  <project-components>
+    <component>
+      <implementation-class>com.anecdote.ideaplugins.commitlog.CommitLogProjectComponent</implementation-class>
+    </component>
+  </project-components>
+  <extensions defaultExtensionNs="com.intellij">
+    <checkinHandlerFactory implementation="com.anecdote.ideaplugins.commitlog.CommitLogApplicationComponent"/>
+  </extensions>
+  <!--<extensions xmlns="com.intellij">-->
+    <!--<errorHandler implementation="nu.studer.idea.errorreporting.PluginErrorReportSubmitter"/>-->
+  <!--</extensions>-->
+</idea-plugin>
