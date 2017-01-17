@@ -1,0 +1,3 @@
+<plugins>
+    <plugin id="CommitLog" url="https://github.com/tomotoyinbo/intellij-commitLog-plugin/CommitLog.jar" version="1.4"/>
+</plugins>
