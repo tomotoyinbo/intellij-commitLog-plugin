@@ -18,7 +18,7 @@
   <version>1.4</version>
   <!--Don't forget to update the version CONSTANT!!!-->
   <!-- New vendor -->
-  <vendor email="tomotoyinbo@gmail.com" url="https://github.com/tomotoyinbo/intellij-commitLog-plugin">Tayo Omotoyinbo</vendor>
+  <vendor email="tomotoyinbo@gmail.com" url="https://github.com/tomotoyinbo/intellij-commitLog-plugin/">Tayo Omotoyinbo</vendor>
   <!-- Original Author -->
   <vendor email="anecdotesoftware@gmail.com" url="http://code.google.com/p/ideacommitlogplugin/">Nathan Brown</vendor>
   <idea-version since-build="162"/>
